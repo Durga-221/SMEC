@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+<body background="">
+
+    <div class="container">
+        <div class="elements">
+            <form action="main.html" onsubmit="return loginformvalidate()">
+              <div class="login">
+                <h1>LOGIN</h1>
+              </div>
+                <div class="logo">
+                    <img src="logo.png" alt="" height="90px">
+                </div>
+              
+                <div class="box">
+                    <input type="text" placeholder="USERNAME" class="us" id="us">
+                </div>
+                <div class="box">
+                    <input type="password" placeholder="PASSWORD" class="us" id="pass">
+                </div>
+                <div class="link">
+                    <a href="forget.html" class="un">forget password?</a>
+                    <a href="register.html" class="un">register</a>
+                </div>
+                <div class="box">
+                    <button class="button">LOGIN</button>
+                    <script>
+                        function loginformvalidate(){
+                            var a = document.getElementById("us").value;
+                            var b = document.getElementById("pass").value;
+                            if(a==""){
+                                alert("Enter Username")
+                                return false;
+                            }
+                            else if(b==""){
+                                 alert("Enter PassWord")
+                             return false;
+                            }
+                            else{
+                                return true;
+                            }
+                        }
+                        </script>
+    
+</body>
+</html>

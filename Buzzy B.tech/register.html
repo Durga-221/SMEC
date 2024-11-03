@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <style>
+        .container{
+            width: 400px;
+            height: 570px;
+            border: 2px solid black;
+            margin-left: 35%;
+            margin-top: 10%;
+            border-radius:10px;
+        }
+        .elements{
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        .us{
+            width: 300px;
+            height: 40px;
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: transparent;
+        }
+        .box{
+            margin: 20px;
+        }
+        .center{
+            text-align: center;
+        }
+        .button{
+            background-color: transparent;
+            width: 300px;
+            height: 40px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+        ::placeholder{
+            color: black;
+        }
+    </style>
+</head>
+<body background="">
+    <div class="container">
+        <div class="elements">
+            <form action="otp.html" onsubmit=" return validate()">
+                <div class="center">
+                    <h1>REGISTER</h1>
+                </div>
+                <div class="box">
+                    <input type="text" placeholder="NAME" class="us" id="name">
+                </div>
+                <div class="box">
+                    <input type="text" placeholder="USERNAME" class="us" id="us">
+                </div>
+                <div class="box">
+                    <input type="email" placeholder="EMAIL" class="us" id="email" >
+                </div>
+                <div class="box">
+                    <input type="tel" placeholder="MOBILE NUMBER" class="us" id="num">
+                </div>
+                <div class="box">
+                    <input type="password" placeholder="PASSWORD" class="us" id="pass">
+                </div>
+                <div class="box">
+                    <input type="password" placeholder="CONFIRM PASSWORD" class="us" id="pass">
+                </div>
+                <div class="box">
+
+                    <button class="button">SEND OTP</button>
+                    <script>
+                        function validate(){
+                            var a  = document.getElementById("name").value;
+                            var b = document.getElementById("us").value;
+                            var c = document.getElementById("email").value;
+                            var d = document.getElementById("pass").value;
+                            var e = document.getElementById("num").value;
+                            if(a==""){
+                                alert("Enter Name");
+                                return false;
+                            }
+                            else if (b==""){
+                                alert("Enter UserName");
+                                return false;
+                            }
+                            else if(c==""){
+                                alert("Enter Email");
+                                return false;
+                            }
+                            else if(d==""){
+                                for(var i=0;i<d.length;i++){
+                                    if(i==0){
+                                        alert("Enter PassWord");
+
+                                    }
+                                    else {
+                                        alert("Please Confirm PassWord");
+                                    }
+
+                                }
+                                return false;
+
+                            }
+                            else if (e==""){
+                                alert("Enter Mobile Number");
+                            }
+                            else{
+                                return true;
+                            }
+                        }
+                    </script>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
